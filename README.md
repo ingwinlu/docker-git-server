@@ -1,6 +1,7 @@
 # docker-git-server
 
-A simple dockerized git repository server.
+A simple dockerized git repository server. Also available on
+[Docker Hub](https://hub.docker.com/r/winlu/docker-git-server/).
 
 ## Usage
 
