@@ -13,7 +13,6 @@ docker run -d -p 1234:22 \
 ```
 
 Add a user:
-`docker exec <container_name> sh add_git_user.sh <username> <publickey>`
 ``docker exec git_server sh add_git_user.sh winlu "`cat ~/.ssh/id_rsa.pub`"``
 
 Initialize a repo:
