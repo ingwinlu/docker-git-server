@@ -1,0 +1,3 @@
+#!/bin/sh
+printf '%s\n' "Auth success. No shell access allowed!"
+exit 128
