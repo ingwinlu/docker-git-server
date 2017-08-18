@@ -3,10 +3,11 @@ FROM alpine:3.6
 RUN apk add --no-cache openssh git
 
 RUN apk add --no-cache --virtual config_editing sed \
-    && sed -i /etc/ssh/sshd_config -e 's/#PasswordAuthentication yes/PasswordAuthentication no/g' \
-    && sed -i /etc/ssh/sshd_config -e 's/#AllowAgentForwarding yes/AllowAgentForwarding no/g' \
-    && sed -i /etc/ssh/sshd_config -e 's/#AllowTcpForwarding yes/AllowTcpForwarding no/g' \
-    && sed -i /etc/ssh/sshd_config -e 's|#HostKey /etc/ssh/|HostKey /git/data/keys/|g' \
+    && sed -i /etc/ssh/sshd_config \
+        -e 's/#PasswordAuthentication yes/PasswordAuthentication no/g' \
+        -e 's/#AllowAgentForwarding yes/AllowAgentForwarding no/g' \
+        -e 's/#AllowTcpForwarding yes/AllowTcpForwarding no/g' \
+        -e 's|#HostKey /etc/ssh/|HostKey /git/data/keys/|g' \
     && apk del config_editing
 
 RUN mkdir -p /git/data \
