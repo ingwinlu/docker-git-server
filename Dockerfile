@@ -1,6 +1,4 @@
-ARG ALPINE_VER
-
-FROM alpine:${ALPINE_VER}
+FROM alpine:3.6
 
 RUN apk add --no-cache openssh git
 
