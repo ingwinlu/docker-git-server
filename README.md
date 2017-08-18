@@ -4,7 +4,6 @@ A simple dockerized git repository server. Also available on
 [Docker Hub](https://hub.docker.com/r/winlu/docker-git-server/).
 
 ## Usage
-
 Start the container:
 ```
 docker run -d -p 1234:22 \
@@ -12,6 +11,8 @@ docker run -d -p 1234:22 \
    -v git_data:/git/data \
    winlu/docker-git-server
 ```
+Or a simple `docker-compose up` (you might want to edit the source of
+the image in).
 
 Add a user:
 ``docker exec git_server sh add_git_user.sh winlu "`cat ~/.ssh/id_rsa.pub`"``
