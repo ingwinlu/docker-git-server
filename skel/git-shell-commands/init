@@ -1,2 +1,3 @@
 #!/bin/sh
-git init --bare ~/$1
+git init --bare ~/$1 &&
+    logger -p info -t git User `whoami` created a new repo $1
