@@ -9,8 +9,4 @@ services:
        - "1234:22"
     volumes:
        - ./git_data:/git/data
-#    entrypoint: sleep 100000000
-#volumes:
-#    git_data: 
-
 
