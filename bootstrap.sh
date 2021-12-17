@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# stuff from Dockerfile to allow the VOLUME to work: 
+mkdir -p /git/data \
+    && mkdir -p /git/data/keys \
+    && mkdir -p /git/data/users
+
 maybe_build_key(){
     if [ -f "/git/data/keys/ssh_host_$1_key" ]
     then

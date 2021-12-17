@@ -8,8 +8,5 @@ services:
     ports:
        - "1234:22"
     volumes:
-       - git_data:/git/data
-volumes:
-    git_data:
-
+       - ./git_data:/git/data
 
