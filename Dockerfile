@@ -24,7 +24,6 @@ COPY bootstrap.sh ./
 
 RUN touch /var/log/messages
 
-
 EXPOSE 22
 VOLUME /git/data
 
